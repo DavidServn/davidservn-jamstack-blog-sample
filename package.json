@@ -12,9 +12,9 @@
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.27.2",
-    "nuxt": "^2.15.8",
+    "core-js": "^3.29.0",
+    "nuxt": "^2.16.3",
+    "postcss": "^8.4.21",
     "webpack": "^4.46.0"
-  },
-  "devDependencies": {}
+  }
 }
