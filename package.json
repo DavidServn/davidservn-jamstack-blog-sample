@@ -14,7 +14,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.29.0",
     "nuxt": "^2.16.3",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.23",
     "webpack": "^4.46.0"
   }
 }
