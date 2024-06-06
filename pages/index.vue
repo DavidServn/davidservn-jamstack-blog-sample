@@ -31,7 +31,7 @@
 <script setup lang="ts">
   const { data: content } = await useAsyncData('index', () => queryContent()
     .only(["_path", "title", "summary"]) // Only fetch the fields that we require to improve performance.
-    .sort({ createdAt: -1, title: 1 })
+    .sort({ title: 1, createdAt: -1 })
     .find());
   const posts = content.value ?? [];
 </script>
