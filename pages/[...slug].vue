@@ -31,8 +31,13 @@
 </template>
 
 <script setup lang="ts">
+  let path = useRoute().fullPath;
+  if (path[path.length - 1] == '/') {
+    path = path.slice(0, -1);
+  }
+
   const { data: content } = await useAsyncData('post', () => queryContent()
-    .where({ _path: '/' + useRoute().params.slug[0] })
+    .where({ _path: path })
     .findOne());
 
   const post = content.value;
