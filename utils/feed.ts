@@ -6,7 +6,7 @@ export async function getFeed(e: H3Event): Promise<Feed> {
   const baseUrl = process.env.BASE_URL ?? '';
 
   const content = await serverQueryContent(e)
-    .only(['_path', 'title', 'description', 'createdAt'])
+    .only(['_path', 'title', 'summary', 'createdAt'])
     .find();
 
   const feed = new Feed({
@@ -36,7 +36,7 @@ export async function getFeed(e: H3Event): Promise<Feed> {
       title: post.title ?? '',
       id: url,
       link: url,
-      description: post.description,
+      description: post.summary,
       date: new Date(post.createdAt),
       image: baseUrl + "/images/blog/meta" + post._path + ".png",
       author: [{
