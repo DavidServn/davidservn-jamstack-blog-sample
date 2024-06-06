@@ -81,20 +81,12 @@ export default defineNuxtConfig({
   // https://nuxt.com/docs/api/nuxt-config#components
   components: true,
   // https://nuxt.com/docs/api/nuxt-config#modules-1
-  modules: ["@nuxt/content", "@nuxtjs/sitemap"],
+  modules: ["@nuxt/content"],
   // https://nuxtseo.com/sitemap/getting-started/installation
-  sitemap: {
-    sources: [
-      '/api/sitemap'
-    ]
-  },
   nitro: {
     prerender: {
-      routes: ['/feed.atom', '/feed.json', '/feed.xml'],
+      routes: ['/sitemap.xml', '/feed.atom', '/feed.json', '/feed.xml'],
     },
-  },
-  site: {
-    url: process.env.BASE_URL
   },
   runtimeConfig: {
     public: {
