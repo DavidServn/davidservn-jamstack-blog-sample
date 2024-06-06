@@ -24,11 +24,7 @@
       </article>
       <br />
       <p class="footer">
-        Follow me on
-        <a target="_blank" href="https://twitter.com/DavidServn">Twitter</a> to
-        be notified about new posts or through RSS (
-        <a target="_blank" href="/feed.xml">XML</a> /
-        <a target="_blank" href="/feed.json">JSON</a> ).
+        Follow me on <a target="_blank" href="https://twitter.com/DavidServn">Twitter</a> to be notified about new posts.
       </p>
     </div>
   </div>
