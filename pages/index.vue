@@ -7,14 +7,16 @@
         <a target="_blank" href="/feed.xml">XML</a>
         /
         <a target="_blank" href="/feed.json">JSON</a>
+        /
+        <a target="_blank" href="/feed.atom">ATOM</a>
         )
       </p>
     </div>
     <div id="blog-list">
-      <div v-for="post in posts" :key="post.slug">
+      <div v-for="post in posts" :key="post._path">
         <article>
           <h1>
-            <a class="title" :href="'/' + post.slug">
+            <a class="title" :href="post._path">
               {{ post.title }}
             </a>
           </h1>
@@ -26,18 +28,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData({ $content }) {
-    const posts = await $content()
-      .only(["slug", "title", "summary"]) // Only fetch the fields that we require to improve performance.
-      .sortBy("createdAt", "desc")
-      .sortBy("title")
-      .fetch();
-
-    return {
-      posts,
-    };
-  },
-};
+<script setup lang="ts">
+  const { data: content } = await useAsyncData('index', () => queryContent()
+    .only(["_path", "title", "summary"]) // Only fetch the fields that we require to improve performance.
+    .sort({ createdAt: -1, title: 1 })
+    .find());
+  const posts = content.value ?? [];
 </script>
