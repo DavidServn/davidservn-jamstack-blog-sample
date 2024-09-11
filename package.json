@@ -17,8 +17,5 @@
     "sitemap": "^8.0.0",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.9.5"
   }
 }
