@@ -11,7 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^2.13.4",
+    "@nuxt/content": "^3.7.1",
     "feed": "^4.2.2",
     "nuxt": "^3.19.2",
     "sitemap": "^8.0.0",
