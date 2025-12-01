@@ -19,6 +19,6 @@
     "vue-router": "^4.5.1"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.52.3"
+    "@rollup/rollup-linux-x64-gnu": "^4.53.3"
   }
 }
